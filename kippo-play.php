@@ -110,7 +110,7 @@ require('include/header.php');
                                 $log .= shell_exec("base64 -w 0 " . $log_path . " 2>&1");
                             else {
                                 $log .= "*** Log: $log_path ***\n";
-                                $log .= shell_exec("python /opt/cowrie/utils/playlog.py -m 0 " . $log_path);
+                                $log .= shell_exec("python /opt/cowrie/bin/playlog -m 0 " . $log_path);
                                 $log .= "\n\n*** End Of Log ***\n\n";
                             }
                         } else
